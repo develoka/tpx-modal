@@ -1,0 +1,114 @@
+$black: #111 !default;
+$white: #fff !default;
+$red: #ff4136 !default;
+$transparency: .2 !default;
+$transition-duration: .3s !default;
+$z-index: 100 !default;
+
+:host {
+  text-align: center;
+
+  > input.toggle {
+    display: none;
+
+    &:checked {
+      ~ .overlay, ~ article {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      ~ .overlay {
+        display: block;
+      }
+      ~ article {
+        overflow: auto;
+      }
+    }
+  }
+  
+  > .overlay, > article {
+    max-height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: $z-index;
+    pointer-events: none;
+    transition: opacity $transition-duration;
+  }
+  
+  > .overlay {
+    background: rgba($black, 3 * $transparency);
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    right: 0;
+    top: 0;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  > article {
+    background: $white;
+    border: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    &.x-center.y-top    { top: 0;    left: 50%; transform: translateX(-50%); }
+    &.x-left.y-top      { top: 0;    left:   0; }
+    &.x-right.y-top     { top: 0;    right:  0; }
+    &.x-center.y-center { top: 50%;  left: 50%; transform: translateX(-50%) translateY(-50%); }
+    &.x-left.y-center   { top: 50%;  left:   0; transform: translateY(-50%); }
+    &.x-right.y-center  { top: 50%;  right:  0; transform: translateY(-50%); }
+    &.x-center.y-bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
+    &.x-left.y-bottom   { bottom: 0; left:   0; }
+    &.x-right.y-bottom  { bottom: 0; right:  0; }
+
+    > header, > section, > footer {
+      padding: .6em .8em;
+    }
+
+    > header {
+      border-bottom: 1px solid #eee;
+      font-weight: bold;
+      position: relative;
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        display: inline-block;
+        margin: 0 2em 0 0;
+        vertical-align: text-bottom;
+      }
+
+      .close {
+        cursor: pointer;
+        font-size: 1.2em;
+        padding: 0 .5em;
+        position: absolute;
+        right: .3em;
+        top: .4em;
+        width: auto;
+    
+        &:hover {
+          color: $red;
+        }
+      }
+    
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    > section {
+      flex-grow: 1;
+    }
+  }
+}

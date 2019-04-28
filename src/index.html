@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Put your description here.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    body {
+      background-color: #ededed;
+    }
+    .form-control {
+      box-sizing : border-box;
+      width: 100%;
+      margin-top: 5px;
+    }
+  </style>
+  <title>tpx-modal</title>
+</head>
+<body>
+  <button onclick="modal.setAttribute('is-open', true)">
+    Show modal
+  </button>
+
+  <tpx-modal 
+    title="Toprax Modal" 
+    x-pos="center"
+    y-pos="center"
+    width="300px"
+    show-close-button
+    should-close-on-esc
+    show-overlay
+    should-close-on-overlay-click>
+
+    <form action="#">
+      <input class="form-control" type="email" placeholder="Email address" /> 
+      <input class="form-control" type="password" placeholder="Your password" /> 
+    </form>
+    
+    <div slot="footer">
+      <button class="form-control">Login</button>
+    </div>
+
+  </tpx-modal>
+
+  <script>
+    var modal = document.querySelector('tpx-modal');
+    modal.onRequestOpen  = function () { console.log('Open the modal');  }
+    modal.onRequestClose = function () { console.log('Close the modal'); }
+  </script>
+  <script type="module" src="./tpx-modal.js"></script>
+</body>
+
+</html>
