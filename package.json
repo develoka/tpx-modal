@@ -1,11 +1,14 @@
 {
-  "name": "tpx-modal",
-  "version": "0.0.0",
-  "description": "Webcomponent tpx-modal following open-wc recommendations",
+  "name": "@develoka/tpx-modal",
+  "version": "0.0.1",
+  "description": "Simple customizable modal web component built by following open-wc recommendations",
   "author": "tpx-modal",
-  "homepage": "https://github.com/open-wc/open-wc/",
+  "homepage": "https://github.com/develoka/tpx-modal/",
   "license": "MIT",
-  "repository": "https://github.com/open-wc/open-wc/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deveoka/tpx-modal.git"
+  },
   "scripts": {
     "start": "owc-dev-server --open demo",
     "lint:eslint": "eslint --ext .js,.html .",
@@ -58,5 +61,18 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/develoka/tpx-modal/issues"
+  },
+  "main": "./src/tpx-modal.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "webcomponent",
+    "modal",
+    "dialog",
+    "popup"
+  ]
 }
