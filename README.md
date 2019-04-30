@@ -1,6 +1,7 @@
 # \<tpx-modal>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
+
 Check the [demo here](https://code.develoka.com/gist/6888d64486fe9681104e7e66e102c9f0)
 
 ## Installation
@@ -57,8 +58,8 @@ render(html`
 
 ## Usage example (in old browser)
 ```html
-<script src="https://unpkg.com/@develoka/tpx-modal@0.0.4/dist/polyfills/babel.js"></script>
-<script src="https://unpkg.com/@develoka/tpx-modal@0.0.4/dist/polyfills/webcomponents.js"></script>
+<script src="@develoka/tpx-modal@0.0.4/dist/polyfills/babel.js"></script>
+<script src="@develoka/tpx-modal@0.0.4/dist/polyfills/webcomponents.js"></script>
 
 <button onclick="document.querySelector('tpx-modal').setAttribute('is-open', true)">
   Show modal
@@ -77,6 +78,6 @@ render(html`
 </tpx-modal>
 
 <script type="module">
-  import 'https://unpkg.com/@develoka/tpx-modal/dist/legacy';
+  import '@develoka/tpx-modal/dist/legacy';
 </script>
 ```
