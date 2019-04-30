@@ -1,48 +1,82 @@
 # \<tpx-modal>
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
+Check the [demo here](https://code.develoka.com/gist/6888d64486fe9681104e7e66e102c9f0)
 
 ## Installation
 ```bash
 npm i @develoka/tpx-modal
 ```
 
-## Usage
+## Usage example
 ```js
 import { html, render } from 'lit-html';
 import '@develoka/tpx-modal'
 
 render(html`
-  <tpx-modal></tpx-modal>
+  <button onclick="document.querySelector('tpx-modal').setAttribute('is-open', true)">
+    Show modal
+  </button>
+
+  <tpx-modal 
+    title="This is Modal" 
+    x-pos="center"
+    y-pos="center"
+    width="300px"
+    show-close-button
+    should-close-on-esc
+    show-overlay
+    should-close-on-overlay-click>
+    <h3>Hello world</h3>
+  </tpx-modal>
 `, document.querySelector('body'));
 ```
 
-## Usage (in browser / vanilla js)
+## Usage example (in browser / vanilla js)
 ```html
 <script type="module">
   import '@develoka/tpx-modal/dist';
 </script>
 
-<tpx-modal></tpx-modal>
-```
-Check the [demo here](https://code.develoka.com/gist/6888d64486fe9681104e7e66e102c9f0)
+<button onclick="document.querySelector('tpx-modal').setAttribute('is-open', true)">
+  Show modal
+</button>
 
-## Testing using karma (if applied by author)
-```bash
-npm run test
-```
-
-## Testing using karma via browserstack (if applied by author)
-```bash
-npm run test:bs
-```
-
-## Demoing using storybook (if applied by author)
-```bash
-npm run storybook
+<tpx-modal 
+  title="This is Modal" 
+  x-pos="center"
+  y-pos="center"
+  width="300px"
+  show-close-button
+  should-close-on-esc
+  show-overlay
+  should-close-on-overlay-click>
+  <h3>Hello world</h3>
+</tpx-modal>
 ```
 
-## Linting (if applied by author)
-```bash
-npm run lint
+## Usage example (in old browser)
+```html
+<script src="https://unpkg.com/@develoka/tpx-modal@0.0.4/dist/polyfills/babel.js"></script>
+<script src="https://unpkg.com/@develoka/tpx-modal@0.0.4/dist/polyfills/webcomponents.js"></script>
+
+<button onclick="document.querySelector('tpx-modal').setAttribute('is-open', true)">
+  Show modal
+</button>
+
+<tpx-modal 
+  title="This is Modal" 
+  x-pos="center"
+  y-pos="center"
+  width="300px"
+  show-close-button
+  should-close-on-esc
+  show-overlay
+  should-close-on-overlay-click>
+  <h3>Hello world</h3>
+</tpx-modal>
+
+<script type="module">
+  import 'https://unpkg.com/@develoka/tpx-modal/dist/legacy';
+</script>
 ```
