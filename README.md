@@ -58,8 +58,8 @@ render(html`
 
 ## Usage example (in old browser)
 ```html
-<script src="@develoka/tpx-modal@0.0.4/dist/polyfills/babel.js"></script>
-<script src="@develoka/tpx-modal@0.0.4/dist/polyfills/webcomponents.js"></script>
+<script src="@develoka/tpx-modal/dist/polyfills/babel.js"></script>
+<script src="@develoka/tpx-modal/dist/polyfills/webcomponents.js"></script>
 
 <button onclick="document.querySelector('tpx-modal').setAttribute('is-open', true)">
   Show modal
