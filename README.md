@@ -15,8 +15,8 @@ npm i @develoka/tpx-modal
 | ----------------------------- | ------- | ---------- | ---------------------------- |
 | is-open                       | Boolean | false      |                              |
 | title                         | String  | "My Modal" |                              |
-| x-pos                         | String  | "center    | Options: left, center, right |
-| y-pos                         | String  | "center    | Options: top, center, bottom |
+| x-pos                         | String  | "center"   | Options: left, center, right |
+| y-pos                         | String  | "center"   | Options: top, center, bottom |
 | width                         | String  | "auto"     |                              |
 | height                        | String  | "auto"     |                              |
 | rawstyles                     | String  | ""         | Use this at your own risk    |
