@@ -16,49 +16,49 @@ npm i @develoka/tpx-modal
   import '@develoka/tpx-modal/dist';
 </script>
 
-//
-// Modifieable properties directly into element attribute:
-//
+<!--  -->
+<!-- Modifieable properties directly into element attribute: --> 
+<!--  -->
 
 <tpx-modal
-  /* (Boolean | default: false) */
+  <!-- (Boolean | default: false) -->
   is-open
   
-  /* (String | default: "My Modal") -  */
+  <!-- (String | default: "My Modal") -->
   title="Modal title"
   
-  /* (String | default: "center" | options: ["center", "left", "right"]) */
+  <!-- (String | default: "center" | options: ["center", "left", "right"]) -->
   x-pos="center"
   
-  /* (String | default: "center" | options: ["center", "top", "bottom"]) */
+  <!-- (String | default: "center" | options: ["center", "top", "bottom"]) -->
   y-pos="center"
   
-  /* (String | default: "auto") */
+  <!-- (String | default: "auto") -->
   width="auto"
   
-  /* (String | default: "auto") */
+  <!-- (String | default: "auto") -->
   height="auto"
   
-  /* (String | default: "") */
+  <!-- (String | default: "") -->
   rawstyles=".overlay { background: red!important }"
   
-  /* (Boolean | default: false) */
+  <!-- (Boolean | default: false) -->
   show-close-button
   
-  /* (Boolean | default: false) */
+  <!-- (Boolean | default: false) -->
   show-overlay
   
-  /* (Boolean | default: false) */
+  <!-- (Boolean | default: false) -->
   should-close-on-overlay-click
   
-  /* (Boolean | default: false) */
+  <!-- (Boolean | default: false) -->
   should-close-on-esc
 >
 </tpx-modal>
 
-//
-// Modifieable properties only with javascript:
-//
+<!-- -->
+<!-- Modifieable properties only with javascript: --> 
+<!-- -->
 
 <script>
 // Get modal element
