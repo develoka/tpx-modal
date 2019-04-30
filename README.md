@@ -16,11 +16,10 @@ npm i @develoka/tpx-modal
   import '@develoka/tpx-modal/dist';
 </script>
 
-<!--  -->
 <!-- Modifieable properties directly into element attribute: --> 
-<!--  -->
 
 <tpx-modal
+
   <!-- (Boolean | default: false) -->
   is-open
   
@@ -54,11 +53,24 @@ npm i @develoka/tpx-modal
   <!-- (Boolean | default: false) -->
   should-close-on-esc
 >
+  <!-- Header slot -->
+  <div slot="header">
+    <strong>A tale of sub heeader</strong>
+  </div>
+
+  <!-- Default slot on content -->
+  <form action="#">
+    <input class="form-control" type="email" placeholder="Email address" /> 
+    <input class="form-control" type="password" placeholder="Your password" /> 
+  </form>
+  
+  <!-- Footer slot -->
+  <div slot="footer">
+    <button class="form-control">Login</button>
+  </div>
 </tpx-modal>
 
-<!-- -->
 <!-- Modifieable properties only with javascript: --> 
-<!-- -->
 
 <script>
 // Get modal element
