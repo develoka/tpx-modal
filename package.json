@@ -1,6 +1,6 @@
 {
   "name": "@develoka/tpx-modal",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Simple customizable modal web component built by following open-wc recommendations",
   "author": "tpx-modal",
   "homepage": "https://github.com/develoka/tpx-modal/",
@@ -66,13 +66,16 @@
     "url": "https://github.com/develoka/tpx-modal/issues"
   },
   "main": "./src/tpx-modal.js",
+  "module": "./src/tpx-modal.js",
   "directories": {
     "test": "test"
   },
   "keywords": [
     "webcomponent",
+    "lit-element",
     "modal",
     "dialog",
-    "popup"
+    "popup",
+    "alert"
   ]
 }
