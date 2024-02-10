@@ -2,7 +2,7 @@
 
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
 
-Check the [demo here](https://labs.codesenpai.com/gist/6888d64486fe9681104e7e66e102c9f0)
+Check the [demo here](https://code.duapx.id/gist/6888d64486fe9681104e7e66e102c9f0)
 
 ## Installation
 ```bash
